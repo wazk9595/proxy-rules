@@ -1,0 +1,24 @@
+  #temby
+  - DOMAIN,temby856.285286.xyz,🚀 节点选择
+  - DOMAIN-SUFFIX,516516.xyz,🎯 全球直连
+  - DOMAIN-SUFFIX,temby.wiki,🎯 全球直连
+  #saturday
+  - DOMAIN,emby.saturday.video,🎯 全球直连
+  - DOMAIN,lite.saturday.video,🚀 节点选择
+  #墨云阁
+  - DOMAIN,2pfdml.mobaiemby.site,🚀 节点选择
+  - DOMAIN,ds4837.mobaiemby.site,🎯 全球直连
+  - DOMAIN,uytnd2.mobaiemby.site,🎯 全球直连
+  - DOMAIN,emby-myg-de.vfing.de,🚀 节点选择
+  #pilipili
+  - DOMAIN-SUFFIX,pilipiliultra.com,🚀 节点选择
+  #垃圾
+  - DOMAIN-SUFFIX,xmsl.org,🚀 节点选择
+  #南飞
+  - DOMAIN,us.nanflix.net,🚀 节点选择
+  #levilde
+  - DOMAIN-SUFFIX,itsmyduty.top,🚀 节点选择
+  #酥糖
+  - DOMAIN,st.110.lol,🚀 节点选择
+  - DOMAIN-SUFFIX,110.lol,🎯 全球直连
+  - DOMAIN,sthk.sttss.de,🎯 全球直连

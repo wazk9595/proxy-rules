@@ -1,0 +1,24 @@
+    #temby
+    - DOMAIN,temby856.285286.xyz,Aisu
+    - DOMAIN-SUFFIX,516516.xyz,DIRECT
+    - DOMAIN-SUFFIX,temby.wiki,DIRECT
+    #saturday
+    - DOMAIN,emby.saturday.video,DIRECT
+    - DOMAIN,lite.saturday.video,Aisu
+    #墨云阁
+    - DOMAIN,2pfdml.mobaiemby.site,Aisu
+    - DOMAIN,ds4837.mobaiemby.site,DIRECT
+    - DOMAIN,uytnd2.mobaiemby.site,DIRECT
+    - DOMAIN,emby-myg-de.vfing.de,Aisu
+    #pilipili
+    - DOMAIN-SUFFIX,pilipiliultra.com,Aisu
+    #垃圾
+    - DOMAIN-SUFFIX,xmsl.org,Aisu
+    #南飞
+    - DOMAIN,us.nanflix.net,Aisu
+    #levilde
+    - DOMAIN-SUFFIX,itsmyduty.top,Aisu
+    #酥糖
+    - DOMAIN,st.110.lol,Aisu
+    - DOMAIN-SUFFIX,110.lol,DIRECT
+    - DOMAIN,sthk.sttss.de,DIRECT

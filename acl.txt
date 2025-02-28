@@ -22,3 +22,5 @@
   - DOMAIN,st.110.lol,🚀 节点选择
   - DOMAIN-SUFFIX,110.lol,🎯 全球直连
   - DOMAIN,sthk.sttss.de,🎯 全球直连
+  #蘑菇
+  - DOMAIN,mm.yeahfast.com,🎯 全球直连

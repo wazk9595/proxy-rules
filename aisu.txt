@@ -22,3 +22,5 @@
     - DOMAIN,st.110.lol,Aisu
     - DOMAIN-SUFFIX,110.lol,DIRECT
     - DOMAIN,sthk.sttss.de,DIRECT
+    #蘑菇
+    - DOMAIN,mm.yeahfast.com,DIRECT

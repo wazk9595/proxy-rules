@@ -12,7 +12,7 @@
   - DOMAIN,emby-myg-de.vfing.de,🚀 节点选择
   #pilipili
   - DOMAIN-SUFFIX,pilipiliultra.com,🚀 节点选择
-  - DOMAIN-SUFFIX,pilifun.top,🚀 节点选择
+  - DOMAIN,pilifun.top,🚀 节点选择
   #垃圾
   - DOMAIN-SUFFIX,xmsl.org,🚀 节点选择
   #南飞

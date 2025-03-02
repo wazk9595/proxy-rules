@@ -12,6 +12,7 @@
     - DOMAIN,emby-myg-de.vfing.de,Aisu
     #pilipili
     - DOMAIN-SUFFIX,pilipiliultra.com,Aisu
+    - DOMAIN,pilifun.top,Aisu
     #垃圾
     - DOMAIN-SUFFIX,xmsl.org,Aisu
     #南飞

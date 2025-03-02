@@ -25,3 +25,10 @@
     - DOMAIN,sthk.sttss.de,DIRECT
     #蘑菇
     - DOMAIN,mm.yeahfast.com,DIRECT
+    #AlphaTV
+    - DOMAIN,overseaplus.alphatvapp.top,Aisu
+    - IP-CIDR,154.40.33.88/24,DIRECT
+    - IP-CIDR,154.29.159.230/24,DIRECT
+    - IP-CIDR,148.135.94.8/24,DIRECT
+    - IP-CIDR,103.197.185.84/24,DIRECT
+    - DOMAIN-SUFFIX,alphatvapp.top,,DIRECT

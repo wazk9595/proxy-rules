@@ -35,3 +35,5 @@
   - IP-CIDR,148.135.94.8/24,🎯 全球直连
   - IP-CIDR,103.197.185.84/24,🎯 全球直连
   - DOMAIN-SUFFIX,alphatvapp.top,🎯 全球直连
+  #--alphatvX
+  - IP-CIDR,95.211.168.246/24,🎯 全球直连

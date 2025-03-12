@@ -1,7 +1,7 @@
   #saturday
   - DOMAIN,emby.saturday.video,🎯 全球直连
   - DOMAIN,lite.saturday.video,🚀 节点选择
-- IP-CIDR,106.53.76.122/24,🎯 全球直连
+  - IP-CIDR,106.53.76.122/24,🎯 全球直连
   #temby
   - DOMAIN,temby856.285286.xyz,🚀 节点选择
   - DOMAIN-SUFFIX,516516.xyz,🎯 全球直连

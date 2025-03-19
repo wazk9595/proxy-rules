@@ -1,0 +1,21 @@
+#saturday
+- DOMAIN,lite.saturday.video,🚀 节点选择
+#temby
+- DOMAIN,temby856.285286.xyz,🚀 节点选择
+#墨云阁
+- DOMAIN,2pfdml.mobaiemby.site,🚀 节点选择
+- DOMAIN,emby-myg-de.vfing.de,🚀 节点选择
+#pilipili
+- DOMAIN-SUFFIX,pilipiliultra.com,🚀 节点选择
+#垃圾
+- DOMAIN-SUFFIX,xmsl.org,🚀 节点选择
+#南飞
+- DOMAIN,us.nanflix.net,🚀 节点选择
+#levilde
+- DOMAIN-SUFFIX,itsmyduty.top,🚀 节点选择
+#酥糖
+- DOMAIN,st.110.lol,🚀 节点选择
+#AlphaTV
+- DOMAIN,overseaplus.alphatvapp.top,🚀 节点选择
+#--alphatvX
+- IP-CIDR,95.211.168.246/24,🚀 节点选择

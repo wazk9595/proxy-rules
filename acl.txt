@@ -38,5 +38,5 @@
   #--alphatvX
   - IP-CIDR,95.211.168.246/24,🚀 节点选择
   #PandaTV
-  - DOMAIN-SUFFIX,pdatv.cc,🎯 全球直连
   - DOMAIN,pdatv.cc,🚀 节点选择
+  - DOMAIN-SUFFIX,pdatv.cc,🎯 全球直连

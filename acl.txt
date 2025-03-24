@@ -40,3 +40,5 @@
   #PandaTV
   - DOMAIN,pdatv.cc,🚀 节点选择
   - DOMAIN-SUFFIX,pdatv.cc,🎯 全球直连
+  #琴鸟
+  - DOMAIN,cdn.lyrebirdemby.com,🎯 全球直连

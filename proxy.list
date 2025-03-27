@@ -17,8 +17,7 @@ DOMAIN-SUFFIX,itsmyduty.top
 DOMAIN,st.110.lol
 #AlphaTV
 DOMAIN,alphatvop.alphatvapp.top
-#--alphatvX
-IP-CIDR,95.211.168.246/24
+DOMAIN,alphatvx.alphatvapp.top
 #琴鸟
 DOMAIN,cdn.lyrebirdemby.com
 #PandaTV

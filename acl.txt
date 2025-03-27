@@ -30,13 +30,12 @@
   - DOMAIN,mm.yeahfast.com,🎯 全球直连
   #AlphaTV
   - DOMAIN,alphatvop.alphatvapp.top,🚀 节点选择
+  - DOMAIN,alphatvx.alphatvapp.top,🚀 节点选择
   - IP-CIDR,154.40.33.88/24,🎯 全球直连
   - IP-CIDR,37.123.192.219/24,🎯 全球直连
   - IP-CIDR,148.135.94.8/24,🎯 全球直连
   - IP-CIDR,103.197.185.84/24,🎯 全球直连
   - DOMAIN-SUFFIX,alphatvapp.top,🎯 全球直连
-  #--alphatvX
-  - IP-CIDR,95.211.168.246/24,🚀 节点选择
   #PandaTV
   - DOMAIN,pdatv.cc,🚀 节点选择
   - DOMAIN-SUFFIX,pdatv.cc,🎯 全球直连

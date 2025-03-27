@@ -29,7 +29,7 @@
   #蘑菇
   - DOMAIN,mm.yeahfast.com,🎯 全球直连
   #AlphaTV
-  - DOMAIN,overseaplus.alphatvapp.top,🚀 节点选择
+  - DOMAIN,alphatvop.alphatvapp.top,🚀 节点选择
   - IP-CIDR,154.40.33.88/24,🎯 全球直连
   - IP-CIDR,37.123.192.219/24,🎯 全球直连
   - IP-CIDR,148.135.94.8/24,🎯 全球直连

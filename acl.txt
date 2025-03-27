@@ -31,7 +31,7 @@
   #AlphaTV
   - DOMAIN,overseaplus.alphatvapp.top,🚀 节点选择
   - IP-CIDR,154.40.33.88/24,🎯 全球直连
-  - IP-CIDR,154.29.159.230/24,🎯 全球直连
+  - IP-CIDR,37.123.192.219/24,🎯 全球直连
   - IP-CIDR,148.135.94.8/24,🎯 全球直连
   - IP-CIDR,103.197.185.84/24,🎯 全球直连
   - DOMAIN-SUFFIX,alphatvapp.top,🎯 全球直连

@@ -10,9 +10,9 @@
   - DOMAIN-SUFFIX,temby.wiki,🎯 全球直连
   #墨云阁
   - DOMAIN,2pfdml.mobaiemby.site,🚀 节点选择
-  - DOMAIN,ds4837.mobaiemby.site,🎯 全球直连
-  - DOMAIN,uytnd2.mobaiemby.site,🎯 全球直连
   - DOMAIN,emby-myg-de.vfing.de,🚀 节点选择
+  - DOMAIN,ds4837.mobaiemby.site,🎯 全球直连
+  - DOMAIN,myg.emine3m.com,🎯 全球直连
   #pilipili
   - DOMAIN-SUFFIX,pilipiliultra.com,🚀 节点选择
   - DOMAIN,pilifun.top,🎯 全球直连

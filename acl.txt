@@ -1,44 +1,16 @@
-  #saturday
-  - DOMAIN,emby.saturday.video,🎯 全球直连
-  - DOMAIN,lite.saturday.video,🚀 节点选择
-  - IP-CIDR,106.53.76.122/24,🎯 全球直连
-  #饼服
-  - IP-CIDR,103.40.13.88/24,🎯 全球直连
-  #temby
-  - DOMAIN,temby856.285286.xyz,🚀 节点选择
-  - DOMAIN-SUFFIX,516516.xyz,🎯 全球直连
-  - DOMAIN-SUFFIX,temby.wiki,🎯 全球直连
-  #墨云阁
-  - DOMAIN,2pfdml.mobaiemby.site,🚀 节点选择
-  - DOMAIN,emby-myg-de.vfing.de,🚀 节点选择
-  - DOMAIN,ds4837.mobaiemby.site,🎯 全球直连
-  - DOMAIN,myg.emine3m.com,🎯 全球直连
-  #pilipili
-  - DOMAIN-SUFFIX,pilipiliultra.com,🚀 节点选择
-  - DOMAIN,pilifun.top,🎯 全球直连
-  #垃圾
-  - DOMAIN-SUFFIX,xmsl.org,🚀 节点选择
-  #南飞
-  - DOMAIN,us.nanflix.net,🚀 节点选择
-  #levilde
-  - DOMAIN-SUFFIX,itsmyduty.top,🚀 节点选择
-  #酥糖
-  - DOMAIN,st.110.lol,🚀 节点选择
-  - DOMAIN-SUFFIX,110.lol,🎯 全球直连
-  - DOMAIN,sthk.sttss.de,🎯 全球直连
-  #蘑菇
-  - DOMAIN,mm.yeahfast.com,🎯 全球直连
-  #AlphaTV
-  - DOMAIN,alphatvop.alphatvapp.top,🚀 节点选择
-  - DOMAIN,alphatvx.alphatvapp.top,🚀 节点选择
-  - IP-CIDR,154.40.33.88/24,🎯 全球直连
-  - IP-CIDR,37.123.192.219/24,🎯 全球直连
-  - IP-CIDR,148.135.94.8/24,🎯 全球直连
-  - IP-CIDR,103.197.185.84/24,🎯 全球直连
-  - DOMAIN-SUFFIX,alphatvapp.top,🎯 全球直连
-  #PandaTV
-  - DOMAIN,pdatv.cc,🚀 节点选择
-  - DOMAIN-SUFFIX,pdatv.cc,🎯 全球直连
-  #琴鸟
-  - DOMAIN,cdn.lyrebirdemby.com,🚀 节点选择
-  - DOMAIN-SUFFIX,lyrebirdemby.com,🎯 全球直连
+rules:
+  - RULE-SET,Direct,🎯 全球直连
+  - RULE-SET,Proxy,🚀 节点选择
+rule-providers:
+  Direct:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/wazk9595/proxy-rules/refs/heads/rules/direct.yaml"
+    path: ./providers/direct.yaml
+    interval: 86400
+  Proxy:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/wazk9595/proxy-rules/refs/heads/rules/proxy.yaml"
+    path: ./providers/proxy.yaml
+    interval: 86400

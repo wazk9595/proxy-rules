@@ -1,16 +1,16 @@
 rules:
-  - RULE-SET,Direct,🎯 全球直连
   - RULE-SET,Proxy,🚀 节点选择
+  - RULE-SET,Direct,🎯 全球直连
 rule-providers:
-  Direct:
-    type: http
-    behavior: classical
-    url: "https://raw.githubusercontent.com/wazk9595/proxy-rules/refs/heads/rules/direct.yaml"
-    path: ./providers/direct.yaml
-    interval: 86400
   Proxy:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/wazk9595/proxy-rules/refs/heads/rules/proxy.yaml"
     path: ./providers/proxy.yaml
+    interval: 86400
+  Direct:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/wazk9595/proxy-rules/refs/heads/rules/direct.yaml"
+    path: ./providers/direct.yaml
     interval: 86400

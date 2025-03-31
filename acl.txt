@@ -1,4 +1,3 @@
-payload:
   #saturday
   - DOMAIN,emby.saturday.video,🎯 全球直连
   - DOMAIN,lite.saturday.video,🚀 节点选择

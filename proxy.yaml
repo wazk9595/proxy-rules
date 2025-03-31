@@ -12,8 +12,6 @@ payload:
   - DOMAIN-SUFFIX,xmsl.org
   #南飞
   - DOMAIN,us.nanflix.net
-  #levilde
-  - DOMAIN-SUFFIX,itsmyduty.top
   #酥糖
   - DOMAIN,st.110.lol
   #AlphaTV

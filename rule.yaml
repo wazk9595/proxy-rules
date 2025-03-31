@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 external-controller: :9090
 proxy-providers:
-  1:
+  格调:
     type: http
     url: https://proxy-provider-converter-opal-three.vercel.app/api/convert?url=https%3A%2F%2Fdy.vincefree.sbs%2Fc%2FLINKS&target=clash
     interval: 3600
@@ -26,7 +26,7 @@ proxy-groups:
       - 🇭🇰 香港
       - 🇺🇸 美国
     use:
-      - 1
+      - 格调
   - name: 🎯 全球直连
     type: select
     proxies:

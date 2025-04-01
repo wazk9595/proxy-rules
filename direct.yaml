@@ -5,6 +5,7 @@ payload:
   #饼服
   - IP-CIDR,103.40.13.88/24
   #temby
+  - DOMAIN,temby856.285286.xyz
   - DOMAIN,tembyvip.516516.xyz
   #墨云阁
   - DOMAIN,ds4837.mobaiemby.site

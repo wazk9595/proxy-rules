@@ -361,6 +361,7 @@ payload:
   - DOMAIN,dlgarenanow-a.akamaihd.net
   - DOMAIN,gog.salesmanago.com
   - DOMAIN,f3b7q2p3.ssl.hwcdn.net
+  - DOMAIN-KEYWORD,steam
   - DOMAIN,steammobile.akamaized.net
   - DOMAIN,steampipe-kr.akamaized.net
   - DOMAIN,steampipe-partner.akamaized.net

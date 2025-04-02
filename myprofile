@@ -190,13 +190,13 @@ rule-providers:
   Proxy:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/wazk9595/proxy-rules/refs/heads/rules/proxy.yaml"
+    url: "https://raw.githubusercontent.com/wazk9595/proxy-rules/refs/heads/rules/Clash-rules/proxy.yaml"
     path: ./providers/proxy.yaml
     interval: 86400
   Direct:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/wazk9595/proxy-rules/refs/heads/rules/direct.yaml"
+    url: "https://raw.githubusercontent.com/wazk9595/proxy-rules/refs/heads/rules/Clash-rules/direct.yaml"
     path: ./providers/direct.yaml
     interval: 86400
   LocalAreaNetwork_domain:

@@ -17,10 +17,7 @@ DOMAIN,sthk.sttss.de
 #蘑菇
 DOMAIN,mm.yeahfast.com
 #AlphaTV
-IP-CIDR,154.40.33.88/24
-IP-CIDR,37.123.192.219/24
-IP-CIDR,148.135.94.8/24
-IP-CIDR,103.197.185.84/24
+DOMAIN,aocn.204cloud.com
 DOMAIN-SUFFIX,alphatvapp.top
 #琴鸟
 DOMAIN-SUFFIX,lyrebirdemby.com

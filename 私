@@ -1,0 +1,303 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+external-controller: :9090
+proxy-providers:
+  格调:
+    type: http
+    url: https://proxy-provider-converter-opal-three.vercel.app/api/convert?url=https%3A%2F%2Fdy.vincefree.sbs%2Fc%2FLINKS&target=clash
+    interval: 3600
+    path: ./格调.yaml
+    health-check:
+      enable: true
+      interval: 600
+      # lazy: true
+      url: http://www.gstatic.com/generate_204
+  次元云:
+    type: http
+    url: https://proxy-provider-converter-opal-three.vercel.app/api/convert?url=https%3A%2F%2Fcysub-202502.ciyy2025.link%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D7b38e3604af8115eae2e525da8f0676d&target=clash
+    interval: 3600
+    path: ./次元云.yaml
+    health-check:
+      enable: true
+      interval: 600
+      # lazy: true
+      url: http://www.gstatic.com/generate_204
+  TAG:
+    type: http
+    url: https://proxy-provider-converter-opal-three.vercel.app/api/convert?url=https%3A%2F%2Fhuaikhwang.central-world.org%2Fapi%2Fv1%2Ftrails%2Fbolster%3Ftoken%3D0e643a2667a94e284c70edf18ed00f6f&target=clash
+    interval: 3600
+    path: ./TAG.yaml
+    health-check:
+      enable: true
+      interval: 600
+      # lazy: true
+      url: http://www.gstatic.com/generate_204    
+proxies:
+  - { name: '🇺🇸 美国 自建', server: 107.174.55.213, port: 8882, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: 3a329a08-ba7c-4e0e-8545-e9ff7cec9d93, tfo: false, udp: true}
+  - { name: '🇭🇰 香港 TAG', type: ss, server: jt6t2204.epicgames.ink, port: 12022, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 367e85fa961b.microsoft.com }, tfo: true, udp: true }
+proxy-groups:
+  - name: 节点选择
+    type: select
+    proxies:
+      - 🇭🇰 香港 TAG
+      - 🇺🇸 美国 自建
+      - 格调
+      - 次元云
+      - TAG
+  - name: 格调
+    type: select
+    use:
+     - 格调
+  - name: 次元云
+    type: select
+    use:
+     - 次元云
+  - name: TAG
+    type: select
+    use:
+     - TAG
+  - name: 全球直连
+    type: select
+    proxies:
+      - DIRECT
+  - name: 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 漏网之鱼
+    type: select
+    proxies:
+      - 节点选择 
+rules:
+  - RULE-SET,Proxy,节点选择
+  - RULE-SET,Direct,全球直连
+  - RULE-SET,LocalAreaNetwork_domain,全球直连
+  - RULE-SET,LocalAreaNetwork_ipcidr,全球直连,no-resolve
+  - RULE-SET,UnBan_domain,全球直连
+  - DOMAIN-KEYWORD,admarvel,全球拦截
+  - DOMAIN-KEYWORD,admaster,全球拦截
+  - DOMAIN-KEYWORD,adsage,全球拦截
+  - DOMAIN-KEYWORD,adsensor,全球拦截
+  - DOMAIN-KEYWORD,adsmogo,全球拦截
+  - DOMAIN-KEYWORD,adsrvmedia,全球拦截
+  - DOMAIN-KEYWORD,adsserving,全球拦截
+  - DOMAIN-KEYWORD,adsystem,全球拦截
+  - DOMAIN-KEYWORD,adwords,全球拦截
+  - DOMAIN-KEYWORD,applovin,全球拦截
+  - DOMAIN-KEYWORD,appsflyer,全球拦截
+  - DOMAIN-KEYWORD,domob,全球拦截
+  - DOMAIN-KEYWORD,duomeng,全球拦截
+  - DOMAIN-KEYWORD,dwtrack,全球拦截
+  - DOMAIN-KEYWORD,guanggao,全球拦截
+  - DOMAIN-KEYWORD,omgmta,全球拦截
+  - DOMAIN-KEYWORD,omniture,全球拦截
+  - DOMAIN-KEYWORD,openx,全球拦截
+  - DOMAIN-KEYWORD,partnerad,全球拦截
+  - DOMAIN-KEYWORD,pingfore,全球拦截
+  - DOMAIN-KEYWORD,socdm,全球拦截
+  - DOMAIN-KEYWORD,supersonicads,全球拦截
+  - DOMAIN-KEYWORD,wlmonitor,全球拦截
+  - DOMAIN-KEYWORD,zjtoolbar,全球拦截
+  - RULE-SET,BanAD_domain,全球拦截
+  - DOMAIN-KEYWORD,omgmtaw,全球拦截
+  - RULE-SET,BanProgramAD_domain,全球拦截
+  - RULE-SET,BanProgramAD_ipcidr,全球拦截,no-resolve
+  - RULE-SET,GoogleCN_domain,全球直连
+  - RULE-SET,SteamCN_domain,全球直连
+  - RULE-SET,Telegram_domain,节点选择
+  - RULE-SET,Telegram_ipcidr,节点选择,no-resolve
+  - DOMAIN-KEYWORD,anthropic,节点选择
+  - DOMAIN-KEYWORD,claude,节点选择
+  - DOMAIN-KEYWORD,openai,节点选择
+  - DOMAIN-KEYWORD,abematv.akamaized.net,节点选择
+  - DOMAIN-KEYWORD,avoddashs,节点选择
+  - DOMAIN-KEYWORD,bbcfmt,节点选择
+  - DOMAIN-KEYWORD,uk-live,节点选择
+  - DOMAIN-KEYWORD,voddazn,节点选择
+  - DOMAIN-KEYWORD,hbogoasia,节点选择
+  - DOMAIN-KEYWORD,jooxweb-api,节点选择
+  - DOMAIN-KEYWORD,japonx,节点选择
+  - DOMAIN-KEYWORD,japronx,节点选择
+  - DOMAIN-KEYWORD,nowtv100,节点选择
+  - DOMAIN-KEYWORD,rthklive,节点选择
+  - DOMAIN-KEYWORD,apiproxy-device-prod-nlb-,节点选择
+  - DOMAIN-KEYWORD,dualstack.apiproxy-,节点选择
+  - DOMAIN-KEYWORD,netflixdnstest,节点选择
+  - DOMAIN-KEYWORD,nivod,节点选择
+  - DOMAIN-KEYWORD,olevod,节点选择
+  - DOMAIN-KEYWORD,openai,节点选择
+  - DOMAIN-KEYWORD,-spotify-,节点选择
+  - DOMAIN-KEYWORD,spotify.com,节点选择
+  - DOMAIN-KEYWORD,tiktokcdn,节点选择
+  - DOMAIN-KEYWORD,ttvnw,节点选择
+  - DOMAIN-KEYWORD,youtube,节点选择
+  - RULE-SET,ProxyMedia_domain,节点选择
+  - RULE-SET,ProxyMedia_ipcidr,节点选择,no-resolve
+  - DOMAIN-KEYWORD,1e100,节点选择
+  - DOMAIN-KEYWORD,abema,节点选择
+  - DOMAIN-KEYWORD,appledaily,节点选择
+  - DOMAIN-KEYWORD,avtb,节点选择
+  - DOMAIN-KEYWORD,beetalk,节点选择
+  - DOMAIN-KEYWORD,blogspot,节点选择
+  - DOMAIN-KEYWORD,dropbox,节点选择
+  - DOMAIN-KEYWORD,facebook,节点选择
+  - DOMAIN-KEYWORD,fbcdn,节点选择
+  - DOMAIN-KEYWORD,github,节点选择
+  - DOMAIN-KEYWORD,gmail,节点选择
+  - DOMAIN-KEYWORD,google,节点选择
+  - DOMAIN-KEYWORD,instagram,节点选择
+  - DOMAIN-KEYWORD,porn,节点选择
+  - DOMAIN-KEYWORD,sci-hub,节点选择
+  - DOMAIN-KEYWORD,spotify,节点选择
+  - DOMAIN-KEYWORD,telegram,节点选择
+  - DOMAIN-KEYWORD,twitter,节点选择
+  - DOMAIN-KEYWORD,whatsapp,节点选择
+  - DOMAIN-KEYWORD,youtube,节点选择
+  - DOMAIN-KEYWORD,uk-live,节点选择
+  - DOMAIN-KEYWORD,1drv,节点选择
+  - DOMAIN-KEYWORD,onedrive,节点选择
+  - DOMAIN-KEYWORD,skydrive,节点选择
+  - DOMAIN-KEYWORD,porn,节点选择
+  - DOMAIN-KEYWORD,ttvnw,节点选择
+  - RULE-SET,ProxyLite_domain,节点选择
+  - RULE-SET,ProxyLite_ipcidr,节点选择,no-resolve
+  - DOMAIN-KEYWORD,360buy,全球直连
+  - DOMAIN-KEYWORD,alicdn,全球直连
+  - DOMAIN-KEYWORD,alimama,全球直连
+  - DOMAIN-KEYWORD,alipay,全球直连
+  - DOMAIN-KEYWORD,appzapp,全球直连
+  - DOMAIN-KEYWORD,baidupcs,全球直连
+  - DOMAIN-KEYWORD,bilibili,全球直连
+  - DOMAIN-KEYWORD,ccgslb,全球直连
+  - DOMAIN-KEYWORD,chinacache,全球直连
+  - DOMAIN-KEYWORD,duobao,全球直连
+  - DOMAIN-KEYWORD,jdpay,全球直连
+  - DOMAIN-KEYWORD,moke,全球直连
+  - DOMAIN-KEYWORD,qhimg,全球直连
+  - DOMAIN-KEYWORD,vpimg,全球直连
+  - DOMAIN-KEYWORD,xiami,全球直连
+  - DOMAIN-KEYWORD,xiaomi,全球直连
+  - RULE-SET,ChinaDomain_domain,全球直连
+  - RULE-SET,ChinaDomain_ipcidr,全球直连,no-resolve
+  - RULE-SET,ChinaCompanyIp_ipcidr,全球直连,no-resolve
+  - GEOIP,CN,全球直连
+  - MATCH,漏网之鱼
+rule-providers:
+  Proxy:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/wazk9595/proxy-rules/refs/heads/rules/proxy.yaml"
+    path: ./providers/proxy.yaml
+    interval: 86400
+  Direct:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/wazk9595/proxy-rules/refs/heads/rules/direct.yaml"
+    path: ./providers/direct.yaml
+    interval: 86400
+  LocalAreaNetwork_domain:
+    type: http
+    behavior: domain
+    url: "https://api.nexconvert.com/getruleset?type=3&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvTG9jYWxBcmVhTmV0d29yay5saXN0"
+    path: ./providers/rule-provider_LocalAreaNetwork_domain.yaml
+    interval: 86400
+  LocalAreaNetwork_ipcidr:
+    type: http
+    behavior: ipcidr
+    url: "https://api.nexconvert.com/getruleset?type=4&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvTG9jYWxBcmVhTmV0d29yay5saXN0"
+    path: ./providers/rule-provider_LocalAreaNetwork_ipcidr.yaml
+    interval: 86400
+  UnBan_domain:
+    type: http
+    behavior: domain
+    url: "https://api.nexconvert.com/getruleset?type=3&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvVW5CYW4ubGlzdA"
+    path: ./providers/rule-provider_UnBan_domain.yaml
+    interval: 86400
+  BanAD_domain:
+    type: http
+    behavior: domain
+    url: "https://api.nexconvert.com/getruleset?type=3&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvQmFuQUQubGlzdA"
+    path: ./providers/rule-provider_BanAD_domain.yaml
+    interval: 86400
+  BanProgramAD_domain:
+    type: http
+    behavior: domain
+    url: "https://api.nexconvert.com/getruleset?type=3&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvQmFuUHJvZ3JhbUFELmxpc3Q"
+    path: ./providers/rule-provider_BanProgramAD_domain.yaml
+    interval: 86400
+  BanProgramAD_ipcidr:
+    type: http
+    behavior: ipcidr
+    url: "https://api.nexconvert.com/getruleset?type=4&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvQmFuUHJvZ3JhbUFELmxpc3Q"
+    path: ./providers/rule-provider_BanProgramAD_ipcidr.yaml
+    interval: 86400
+  GoogleCN_domain:
+    type: http
+    behavior: domain
+    url: "https://api.nexconvert.com/getruleset?type=3&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvR29vZ2xlQ04ubGlzdA"
+    path: ./providers/rule-provider_GoogleCN_domain.yaml
+    interval: 86400
+  SteamCN_domain:
+    type: http
+    behavior: domain
+    url: "https://api.nexconvert.com/getruleset?type=3&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUnVsZXNldC9TdGVhbUNOLmxpc3Q"
+    path: ./providers/rule-provider_SteamCN_domain.yaml
+    interval: 86400
+  Telegram_domain:
+    type: http
+    behavior: domain
+    url: "https://api.nexconvert.com/getruleset?type=3&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvVGVsZWdyYW0ubGlzdA"
+    path: ./providers/rule-provider_Telegram_domain.yaml
+    interval: 86400
+  Telegram_ipcidr:
+    type: http
+    behavior: ipcidr
+    url: "https://api.nexconvert.com/getruleset?type=4&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvVGVsZWdyYW0ubGlzdA"
+    path: ./providers/rule-provider_Telegram_ipcidr.yaml
+    interval: 86400
+  ProxyMedia_domain:
+    type: http
+    behavior: domain
+    url: "https://api.nexconvert.com/getruleset?type=3&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUHJveHlNZWRpYS5saXN0"
+    path: ./providers/rule-provider_ProxyMedia_domain.yaml
+    interval: 86400
+  ProxyMedia_ipcidr:
+    type: http
+    behavior: ipcidr
+    url: "https://api.nexconvert.com/getruleset?type=4&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUHJveHlNZWRpYS5saXN0"
+    path: ./providers/rule-provider_ProxyMedia_ipcidr.yaml
+    interval: 86400
+  ProxyLite_domain:
+    type: http
+    behavior: domain
+    url: "https://api.nexconvert.com/getruleset?type=3&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUHJveHlMaXRlLmxpc3Q"
+    path: ./providers/rule-provider_ProxyLite_domain.yaml
+    interval: 86400
+  ProxyLite_ipcidr:
+    type: http
+    behavior: ipcidr
+    url: "https://api.nexconvert.com/getruleset?type=4&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUHJveHlMaXRlLmxpc3Q"
+    path: ./providers/rule-provider_ProxyLite_ipcidr.yaml
+    interval: 86400
+  ChinaDomain_domain:
+    type: http
+    behavior: domain
+    url: "https://api.nexconvert.com/getruleset?type=3&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvQ2hpbmFEb21haW4ubGlzdA"
+    path: ./providers/rule-provider_ChinaDomain_domain.yaml
+    interval: 86400
+  ChinaDomain_ipcidr:
+    type: http
+    behavior: ipcidr
+    url: "https://api.nexconvert.com/getruleset?type=4&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvQ2hpbmFEb21haW4ubGlzdA"
+    path: ./providers/rule-provider_ChinaDomain_ipcidr.yaml
+    interval: 86400
+  ChinaCompanyIp_ipcidr:
+    type: http
+    behavior: ipcidr
+    url: "https://api.nexconvert.com/getruleset?type=4&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvQ2hpbmFDb21wYW55SXAubGlzdA"
+    path: ./providers/rule-provider_ChinaCompanyIp_ipcidr.yaml
+    interval: 86400

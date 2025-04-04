@@ -86,6 +86,10 @@ proxy-groups:
     type: select
     use:
      - TAG
+  - name: 游戏
+    type: select
+    use:
+     - 游戏   
   - name: 全球直连
     type: select
     proxies:

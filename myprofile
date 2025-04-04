@@ -51,7 +51,16 @@ proxy-providers:
       enable: true
       interval: 600
       # lazy: true
-      url: http://www.gstatic.com/generate_204    
+      url: http://www.gstatic.com/generate_204
+  游戏:
+    type: http
+    url: https://proxy-provider-converter-opal-three.vercel.app/api/convert?url=https%3A%2F%2Fapi.nexconvert.com%2Fsub%3Ftarget%3Dclash%26url%3Dhttps%253A%252F%252Fratchada.terminal69.win%252Fapi%252Fv1%252Ftrails%252Fbolster%253Ftoken%253D0e643a2667a94e284c70edf18ed00f6f%26insert%3Dfalse%26include%3D%25E6%25B8%25B8%25E6%2588%258F%26filename%3D%25E6%25B8%25B8%25E6%2588%258F%26emoji%3Dtrue%26list%3Dfalse%26tfo%3Dfalse%26scv%3Dtrue%26fdn%3Dfalse%26expand%3Dfalse%26sort%3Dfalse%26udp%3Dfalse%26new_name%3Dtrue&target=clash interval: 3600
+    path: ./游戏.yaml
+    health-check:
+      enable: true
+      interval: 600
+      # lazy: true
+      url: http://www.gstatic.com/generate_204
 proxies:
   - { name: '🇺🇸 美国 自建', server: 107.174.55.213, port: 8882, client-fingerprint: chrome, type: ss, cipher: aes-128-gcm, password: 3a329a08-ba7c-4e0e-8545-e9ff7cec9d93, tfo: false, udp: true}
   - { name: '🇭🇰 香港 TAG', type: ss, server: jt6t2204.epicgames.ink, port: 12022, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 367e85fa961b.microsoft.com }, tfo: true, udp: true }
@@ -64,6 +73,7 @@ proxy-groups:
       - 格调
       - 次元云
       - TAG
+      - 游戏
   - name: 格调
     type: select
     use:

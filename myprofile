@@ -55,6 +55,7 @@ proxy-providers:
   游戏:
     type: http
     url: https://proxy-provider-converter-opal-three.vercel.app/api/convert?url=https%3A%2F%2Fapi.nexconvert.com%2Fsub%3Ftarget%3Dclash%26url%3Dhttps%253A%252F%252Fratchada.terminal69.win%252Fapi%252Fv1%252Ftrails%252Fbolster%253Ftoken%253D0e643a2667a94e284c70edf18ed00f6f%26insert%3Dfalse%26include%3D%25E6%25B8%25B8%25E6%2588%258F%26filename%3D%25E6%25B8%25B8%25E6%2588%258F%26emoji%3Dtrue%26list%3Dfalse%26tfo%3Dfalse%26scv%3Dtrue%26fdn%3Dfalse%26expand%3Dfalse%26sort%3Dfalse%26udp%3Dfalse%26new_name%3Dtrue&target=clash
+    
     interval: 3600
     path: ./游戏.yaml
     health-check:

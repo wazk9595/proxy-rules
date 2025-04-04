@@ -54,6 +54,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
   游戏:
     type: http
+    url: https://proxy-provider-converter-opal-three.vercel.app/api/convert?url=https%3A%2F%2Fhuaikhwang.central-world.org%2Fapi%2Fv1%2Ftrails%2Fbolster%3Ftoken%3D0e643a2667a94e284c70edf18ed00f6f&target=clash
     interval: 3600
     path: ./游戏.yaml
     health-check:

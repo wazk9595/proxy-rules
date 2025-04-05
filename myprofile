@@ -28,8 +28,8 @@ cfw-bypass:
   - '192.168.*'
   - '<local>'
 hosts:
-    mtalk.google.com: 108.177.125.188
-    tagss.pro: 104.26.4.238
+  mtalk.google.com: 108.177.125.188
+  tagss.pro: 104.26.4.238
 dns:
   enable: false
   listen: '127.0.0.1:5334'
